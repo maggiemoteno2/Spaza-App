@@ -1,9 +1,13 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch,NavLink} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom'
 import signUp from './signUp'
+import history from './../history/history'
 export default function logIn() {
+
   return (
+    
     <div>
       <div class="login-form">
         <h2 class="text-center">User Login</h2>
@@ -17,7 +21,10 @@ export default function logIn() {
           <button type="submit" class="btn btn-primary btn-lg float-right">Sign in</button>
 
         </form>
-       <div class="hint-text">Don't have an account? <a href="">Sign up here</a></div>
+       <div class="hint-text">Don't have an account? 
+       <Router>
+            <NavLink to={`signUp`}>Sign up here</NavLink>
+            </Router></div>
       </div>
     </div>
   )
