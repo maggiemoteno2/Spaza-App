@@ -1,13 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import LogIn from './container/logIn'
+
 import SignUp from './container/signUp'
-function App() {
+import LogIn from './container/LogIn';
+import Example from './container';
+function App () {
   return (
     <div className="App">
       <header className="App-header">
-       <SignUp/>
+        <Example />
       </header>
     </div>
   );
