@@ -3,7 +3,7 @@ import logIn from './LogIn'
 import { Route, Switch, NavLink } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
-import { register } from './../redux/actions'
+import { register } from '../redux/verify'
 
 const SignUp = () => {
   const [credentials, setCredentials] = useState({ password: '', email: '', name: '' })
@@ -42,10 +42,7 @@ const SignUp = () => {
             <button type="submit" onClick={() => addCredentials()} class="btn btn-success btn-lg btn-block">Register Now</button>
           </div>
         </form>
-        <Router>
-          <div class="text-center">Already have an account?  <NavLink to={logIn}>Sign in</NavLink></div>
-
-        </Router>
+        
       </div>
 
     </div>

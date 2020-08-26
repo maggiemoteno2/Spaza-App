@@ -1,8 +1,13 @@
 import React from "react";
 import { Router, Route } from "react-router-dom";
-import history from "./history.js";
-import LogIn from './../container/logIn'
+import history from "./history";
+import LogIn from './../container/LogIn'
 import SignUp from './../container/signUp'
+import Navbar from './../container/navBar'
+import Profile from './../container/profile'
+import { PrivateRoute, PublicRoute } from './routes';
+import CartList from './../container/CartList'
+import PurchaseItems from './../container/purchaseItems';
 
 export const displayRoutes = () => {
   return (
@@ -11,7 +16,7 @@ export const displayRoutes = () => {
         <Navbar />
         <PublicRoute
           exact
-          path="/signup"
+          path="/signUp"
           component={props => <SignUp {...props} />}
         />
 
@@ -19,6 +24,18 @@ export const displayRoutes = () => {
           exact
           path="/profile"
           component={props => <Profile {...props} />}
+        />
+
+        <Route
+          exact
+          path="/carts"
+          component={props => <CartList {...props} />}
+        />
+
+        <Route
+          exact
+          path="/"
+          component={props => <PurchaseItems {...props} />}
         />
 
         <PublicRoute

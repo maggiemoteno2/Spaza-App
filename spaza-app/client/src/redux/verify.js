@@ -1,7 +1,17 @@
 import axios from 'axios'
 import jwtDecode from "jwt-decode";
-import history from './../history/history'
+import history from '../history/history'
 
+
+
+export const logout = () => {
+  return dispatch => {
+    dispatch({ type: "CHANGE_AUTHORIZATION", payload: false })
+    dispatch({ type: "LOGOUT_USER"})
+    localStorage.removeItem("token")
+    history.push('/')
+  }
+}
 
 export const register = (credentials) => {
   return async dispatch => {

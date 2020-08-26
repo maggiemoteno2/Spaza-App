@@ -6,7 +6,7 @@ import { Route, Switch, NavLink } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom'
 import signUp from './signUp'
 import history from '../history/history'
-import { signIn } from '../redux/actions'
+import { signIn } from '../redux/verify'
 
 
 function LogIn () {
@@ -35,10 +35,7 @@ function LogIn () {
           <button type="submit" class="btn btn-primary btn-lg float-right" onClick={(e) => submitCredentials(e)}>Sign in</button>
 
         </form>
-        <div class="hint-text">Don't have an account?
-       <Router>
-            <NavLink to={`signUp`}>Sign up here</NavLink>
-          </Router></div>
+     
       </div>
     </div>
   )
