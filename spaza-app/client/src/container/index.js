@@ -1,9 +1,9 @@
 import React from 'react';
-const { default: SignUp } = require("./signUp");
-const { default: LogIn } = require("./LogIn");
+import SignUp from './signUp'
+import LogIn from './LogIn'
 
 
-class Example extends React.Component {
+class DirectPages extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,7 +17,6 @@ class Example extends React.Component {
   render () {
     return (
       <div>
-        <p>You clicked {this.state.count} times</p>
         <button onClick={() => this.handleCondition('signup')}>
           Sign Up
         </button>
@@ -35,4 +34,4 @@ class Example extends React.Component {
   }
 }
 
-export default Example
+export default DirectPages
