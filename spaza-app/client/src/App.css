@@ -180,12 +180,15 @@ body {
 
 .items{
 	display:grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: auto auto auto auto;
 	padding:10px;
 	grid-gap:10px;
-	border-radius: 20px;
+	    margin: 50px 50px 50px 50px;
+
 
 
 }
 img {
+	 height: 200px;
+  width: 50%;
 }
