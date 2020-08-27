@@ -10,7 +10,7 @@ export default function PurchaseItems () {
     <div>
       <div className="items">
         {shoppingItems.map(shoppingItem => <div>
-          <img src={`${shoppingItem.image}`} alt="cupcake" />
+          <img src={`${shoppingItem.image}`}  />
           <p>name : {shoppingItem.name} </p>
           <p> price :  {shoppingItem.price} </p>
           <button onClick={() => dispatch(addToCart(shoppingItem))}> add to cart </button>
